@@ -18,6 +18,9 @@ bot.on("message", async message => {
 
   if (cmd === `${prefix}TEST`){
     message.channel.send("TEST");
+    
+  elseif (cmd === `${prefix}HELP`){
+    message.channel.send("HEL!");
   }
 });
 
