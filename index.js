@@ -3,7 +3,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(`Hey, Wassup!`);
+  bot.user.setActivity(`Gemeente Delft`);
 });
 
 bot.on("message", async message => {
@@ -16,8 +16,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  if (cmd === `${prefix}ping`){
-    message.channel.send("Pong!");
+  if (cmd === `${prefix}TEST`){
+    message.channel.send("TEST");
   }
 });
 
