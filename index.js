@@ -18,12 +18,23 @@ bot.on("message", async message => {
 
   if (cmd === `${prefix}TEST`){
     message.channel.send("TEST");
-    
-  if(cmd === "HELP") {
-    const sayMessage = args.join("HELP!!");
-    message.channel.send(sayMessage);
   }
+}
+       
+bot.on("message", async message => {
+
+  if (message.author.bot) return;
+  if (message.channel.type === "dm") return;
+
+  let prefix = '=';
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+  if (cmd === `${prefix}HELP`){
+    message.channel.send("HELP!!");
   }
+}
   }
 });
 
